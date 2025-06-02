@@ -1,0 +1,347 @@
+/* ============================
+   RESET & BASE STYLES
+============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f0f0f;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* ============================
+   HEADER SECTION
+============================ */
+header {
+  background: #1f1f1f;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+}
+
+header h1 {
+  color: #61dafb;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #61dafb;
+}
+
+/* ============================
+   HOME SECTION
+============================ */
+.home-section {
+  background: linear-gradient(135deg, #1e1e1e, #111);
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.photo-box {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.photo-box img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #61dafb;
+  box-shadow: 0 0 20px rgba(97, 218, 251, 0.5);
+  animation: pulse 4s infinite;
+  transition: transform 0.3s;
+}
+
+.photo-box img:hover {
+  transform: scale(1.05);
+}
+
+.text-box {
+  flex: 1 1 400px;
+  text-align: center;
+  padding: 20px;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0px rgba(97, 218, 251, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(97, 218, 251, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 0px rgba(97, 218, 251, 0.4);
+  }
+}
+
+/* ============================
+   RESUME DOWNLOAD BUTTON
+============================ */
+.resume-button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.resume-button a {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #61dafb;
+  color: #000;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.resume-button a:hover {
+  background-color: #21a1c4;
+  transform: scale(1.05);
+}
+
+.resume-button i {
+  margin-right: 8px;
+}
+
+
+/* ============================
+   ABOUT / COMMON SECTION LAYOUT
+============================ */
+.section {
+  padding: 80px 10%;
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #61dafb;
+}
+/* Vertical Social Icons */
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 25px;
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 35px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #007bff; /* Change to any color on hover */
+}
+
+/* ============================
+   EDUCATION SECTION
+============================ */
+.education-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.edu-box {
+  background-color: #1f1f1f;
+  border: 2px solid #61dafb;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 10px rgba(97, 218, 251, 0.2);
+}
+
+.edu-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(97, 218, 251, 0.5);
+}
+
+.edu-box h3 {
+  color: #61dafb;
+  margin-bottom: 10px;
+}
+
+.edu-box p {
+  margin: 6px 0;
+  color: #ddd;
+}
+
+/* ============================
+   SKILLS SECTION
+============================ */
+.skills-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.skill {
+  margin-bottom: 25px;
+}
+
+.skill span {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.progress-bar {
+  background-color: #2a2a2a;
+  border-radius: 30px;
+  overflow: hidden;
+  height: 25px;
+}
+
+.progress {
+  height: 100%;
+  line-height: 25px;
+  background: linear-gradient(90deg, #61dafb, #21a1c4);
+  color: #000;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 10px;
+  border-radius: 30px 0 0 30px;
+  transition: width 1s ease-in-out;
+}
+/* ============================
+   PROJECTS SECTION
+============================ */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.project-card {
+  background-color: #1f1f1f;
+  border: 2px solid #61dafb;
+  border-radius: 10px;
+  width: 280px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 10px rgba(97, 218, 251, 0.15);
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(97, 218, 251, 0.5);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  color: #61dafb;
+}
+
+.project-card p {
+  font-size: 0.95em;
+  color: #ddd;
+}
+/* ============================
+   CONTACT SECTION
+============================ */
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  background: #1f1f1f;
+  border: 2px solid #61dafb;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1em;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: #61dafb;
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #21a1c4;
+}
+
+/* ============================
+   SCROLL TO TOP BUTTON
+============================ */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+  background-color: #61dafb;
+  color: #000;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#scrollTopBtn:hover {
+  background-color: #21a1c4;
+}
+
+/* ============================
+   FOOTER SECTION
+============================ */
+footer {
+  background: #0f0f0f;
+  text-align: center;
+  padding: 20px;
+  color: #888;
+  font-size: 0.9em;
+}
